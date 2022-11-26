@@ -1,3 +1,4 @@
+package category.begginer;
 
 import java.util.Scanner;
 
