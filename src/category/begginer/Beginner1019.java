@@ -19,24 +19,17 @@ public class Beginner1019 {
     public static void main(String[] args) throws IOException {
 
 
-        Scanner leitor = new Scanner(System.in);
-        int n = leitor.nextInt();
+        Scanner entrada = new Scanner(System.in);
+        int valor = entrada.nextInt();
 
-        int day = n / (24 * 3600);
+        int horas = valor / 3600;
+        int restoHoras = valor % 3600;
 
-        n = n % (24 * 3600);
-        int hour = n / 3600;
+        int minutos = restoHoras / 60;
+        int restoMinutos = restoHoras % 60;
 
-        n %= 3600;
-        int minutes = n / 60 ;
-
-        n %= 60;
-        int seconds = n;
-
-        System.out.printf("%d:%d:%d",hour,minutes,seconds);
-
-        leitor.close();
-
+        int segundos = restoMinutos;
+        System.out.printf("%d:%d:%d\n", horas, minutos, segundos);
 
 
 
